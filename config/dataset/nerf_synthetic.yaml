@@ -1,0 +1,6 @@
+name: nerf_synthetic
+
+directory: datasets/nerf_synthetic
+scene: lego
+scale_factor: 1.0
+background: white

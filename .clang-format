@@ -1,0 +1,27 @@
+BasedOnStyle: LLVM
+
+# Match Black's column limit.
+ColumnLimit: 88
+
+# Roughly match Black's behavior by putting one parameter per line if they don't all fit
+# on a single line.
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+ExperimentalAutoDetectBinPacking: false
+BinPackArguments: false
+PackConstructorInitializers: Never
+AllowAllArgumentsOnNextLine: false
+
+# Insert braces where possible.
+InsertBraces: true
+RemoveBracesLLVM: false
+
+# Other Stuff
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+LambdaBodyIndentation: Signature
+AlignAfterOpenBracket: BlockIndent
+BreakBeforeBraces: Attach
+IndentCaseLabels: true

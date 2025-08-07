@@ -1,0 +1,8 @@
+# @package _global_
+
+train:
+  max_image_size: null
+  val_interval: 1_000_000
+
+# Run the viewer.
+enable_viewer: true

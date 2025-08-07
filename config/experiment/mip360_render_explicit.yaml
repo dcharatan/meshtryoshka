@@ -1,0 +1,60 @@
+# @package _global_
+
+defaults:
+  - override /dataset: mip360
+  - override /initializer@model.initializer: point_cloud
+
+model:
+  render_mode: explicit
+  loss_weights:
+    rgb: 16.0
+    eikonal_neg: 0.0
+    eikonal_pos: 0.0
+    curvature: 4.0
+    sdf_binary: 0.05
+    sh: 1.0
+
+  tesseract:
+    center_resolution:
+      0: 32
+      4801: 64
+      9601: 128
+      12801: 192
+      16001: 256
+      19201: 320
+      22401: 384
+      25601: 448
+      28801: 512
+      32001: 576
+      35201: 640
+      38401: 704
+      41601: 768
+      44801: 1024
+      48001: 1536
+    arm_resolution:
+      0: 32
+      2401: 64
+      4801: 96
+      9601: 128
+    center_extent: 0.5
+    active_sh_degree:
+      0: 0
+      1200: 1
+
+train:
+  batch_size:
+    0: 4
+    16000: 2
+    28800: 2
+    32000: 1
+  learning_rate:
+    base: 8e-3
+    schedule:
+      0: 0.5
+      16000: 0.25
+      32000: 0.125
+
+
+  num_steps: 60000
+  val_interval: 3200
+  checkpoint_interval: 3200

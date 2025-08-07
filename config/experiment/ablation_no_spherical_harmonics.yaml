@@ -1,0 +1,6 @@
+# @package _global_
+
+# Ablation: Disable spherical harmonics.
+model:
+  tesseract:
+    disable_spherical_harmonics: true

@@ -1,0 +1,9 @@
+# @package _global_
+
+# Ablation: Instead of positioning the grid vertices exponentially (i.e., using
+# contraction), position them uniformly.
+
+model:
+  contraction:
+    disable_exponential: true
+    arm_ratio: 1.0

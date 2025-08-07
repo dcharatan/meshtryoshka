@@ -1,0 +1,62 @@
+# @package _global_
+
+defaults:
+  - override /dataset: mip360
+  - override /initializer@model.initializer: point_cloud
+
+model:
+  loss_weights:
+    rgb: 16.0
+    eikonal_neg: 0.0
+    eikonal_pos: 0.0
+    curvature: 4.0
+    sdf_binary: 0.05
+    sh: 1.0
+
+  tesseract:
+    center_resolution:
+      0: 32
+      2401: 64
+      4801: 128
+      6401: 192
+      8001: 256
+      9601: 320
+      11201: 384
+      14401: 448
+      17601: 512
+      20801: 576
+      24001: 640
+      27201: 704
+      30401: 768
+      33601: 1024
+      36801: 1536
+    arm_resolution:
+      0: 32
+      1201: 64
+      2401: 96
+      4801: 128
+    center_extent: 0.5
+    active_sh_degree:
+      0: 0
+      600: 1
+
+train:
+  batch_size:
+    4800: 8
+    9600: 4
+    11200: 2
+    12800: 1
+  learning_rate:
+    base: 8e-3
+    schedule:
+      4800: 1.0
+      9600: 0.5
+      12800: 0.25
+
+  # A Mip-NeRF 360 dataset takes ~2 GB of memory, so it's best to store it on the CPU
+  # if the overall memory budget is only 24 GB.
+  dataset_device: cpu
+
+  num_steps: 30000
+  val_interval: 1600
+  checkpoint_interval: 1600

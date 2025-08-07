@@ -1,0 +1,6 @@
+name: mip360
+
+directory: datasets/mipnerf360
+scene: bicycle
+scale_factor: 0.6
+llffhold: 8

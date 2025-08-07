@@ -1,0 +1,41 @@
+name: meshtryoshka
+defaults:
+  - /initializer: sphere
+
+render_mode: fused
+
+background: [1.0, 1.0, 1.0]
+
+loss_weights:
+  rgb: 16.0
+  eikonal_neg: 1.0
+  eikonal_pos: 0.0
+  curvature: 0.1
+  sdf_binary: 0.05
+  sh: 0.0
+
+tessellator:
+  shells:
+    0: [0.9, 0.5, 0.1, 0.01, 0.001]
+  sharpness: 400.0
+
+# Set the tesseract's center resolution, arm resolution, and center extent in the
+# individual scene's/dataset's config file.
+tesseract:
+  parameter_init_seed: 123
+  sh_lr_scale: 0.05
+  active_sh_degree:
+    0: 0
+  disable_spherical_harmonics: false
+  disable_sparsity: false
+  disable_tesseract: false
+
+contraction:
+  center_radius: 0.6
+  arm_ratio: 1.5
+  disable_exponential: false
+
+train_ssaa: 3
+render_ssaa: 3
+train_near_plane: 0.01
+eval_near_plane: 1.5

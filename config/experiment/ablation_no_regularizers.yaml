@@ -1,0 +1,11 @@
+# @package _global_
+
+# Ablation: Use no regularizers.
+model:
+  loss_weights:
+    rgb: 16.0
+    eikonal_neg: 0.0
+    eikonal_pos: 0.0
+    curvature: 0.0
+    sdf_binary: 0.0
+    sh: 0.0
