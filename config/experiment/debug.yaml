@@ -1,0 +1,9 @@
+# @package _global_
+
+train:
+  max_image_size: null
+  visualization_interval: 1_000_000
+  val_interval: 1_000_000
+
+# Run the viewer.
+enable_viewer: true

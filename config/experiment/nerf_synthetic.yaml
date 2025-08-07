@@ -1,0 +1,48 @@
+# @package _global_
+
+# For object-centric scenes, we turn effectively turn off the tesseract features and
+# only use the center grid by setting arm_resolution and arm_ratio to zero.
+
+model:
+  eval_near_planes: [1.0]
+  loss_weights:
+    rgb: 16.0
+    eikonal_neg: 1.0
+    eikonal_pos: 0.0
+    curvature: 0.1
+    sdf_binary: 0.02
+    sh: 1.0
+
+  tesseract:
+    center_resolution:
+      0: 32
+      1200: 64
+      1600: 128
+      2000: 192
+      2400: 256
+      2800: 320
+      3200: 384
+      3600: 448
+      4000: 512
+      4400: 576
+      4800: 640
+      5200: 704
+      5600: 768
+      6400: 1024
+      7200: 1536
+      8000: 2048
+    arm_resolution:
+      0: 0
+    center_extent: 1.0
+
+    active_sh_degree:
+      0: 0
+      300: 1
+
+  tessellator:
+    shells:
+      0: [0.7,0.5,0.1,0.001]
+
+  contraction:
+    center_radius: 1.5
+    arm_ratio: 0.0

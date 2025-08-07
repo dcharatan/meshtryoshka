@@ -1,0 +1,29 @@
+defaults:
+  - dataset: nerf_synthetic
+  - model: meshtryoshka
+  - _self_
+
+train:
+  num_steps: 15000
+  learning_rate:
+    base: 3e-2
+    schedule:
+      0: 1.0
+  batch_size:
+    0: 16
+  max_image_size: null
+  visualization_interval: 100
+  val_interval: 399
+  dump_images_interval: 1000000
+  num_dump: null
+  checkpoint_interval: 399
+  heartbeat_interval_seconds: 2.0
+  dataset_device: cuda
+
+seed: 0
+overwrite: false
+enable_viewer: false
+eval_only: false
+render_trajectory_only: false
+max_checkpoint_step: null
+benchmark_rendering_speed: false

@@ -1,0 +1,6 @@
+# @package _global_
+
+# Ablation: Use a cubic grid rather than the tesseract.
+model:
+  tesseract:
+    disable_tesseract: true

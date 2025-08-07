@@ -1,0 +1,6 @@
+name: point_cloud
+
+radius: 0.02
+num_subsample_points: 50000
+interpolate_steps: 200
+num_frozen_steps: 100
