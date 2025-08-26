@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Train",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "meshtryoshka",
+            "args": [
+                "+experiment=[mip360_24gb]",
+            ],
+            "justMyCode": false,
+            "env": {
+                "WORKSPACE": "workspace",
+                "CUDA_VISIBLE_DEVICES": "0",
+                // If you encounter illegal memory accesses:
+                // "CUDA_LAUNCH_BLOCKING": "1",
+                // "CHECK_CORRUPTION": "1",
+                // "TORCH_USE_CUDA_DSA": "1",
+                // If you want to use Jaxtyping for debugging:
+                "USE_JAXTYPING": "1",
+            },
+        },
+    ]
+}

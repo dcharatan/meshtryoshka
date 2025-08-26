@@ -1,0 +1,56 @@
+{
+    // Automatically format using Black on save.
+    "editor.formatOnSave": true,
+    // Draw a ruler at Black's column width.
+    "editor.rulers": [
+        88,
+    ],
+    // Hide non-code files.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/venv": true,
+        "**/*.egg-info": true,
+        "**/*.slang*.lock": true,
+        "**/.slangtorch_cache": true,
+        "**/.pytest_cache": true,
+        "slang": true,
+        "build": true,
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "debug.focusWindowOnBreak": false,
+    "python.defaultInterpreterPath": "~/environments/triangles/bin/python3",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+    },
+    // Slang Configuration
+    "slang.format.clangFormatStyle": "file",
+    "slang.predefinedMacros": [
+        "TILE_WIDTH=16",
+        "TILE_HEIGHT=16",
+        "NUM_SPHERICAL_HARMONICS=16",
+        "DEPTH_BIT_OFFSET=0",
+        "TILE_BIT_OFFSET=32",
+        "TILE_BIT_LENGTH=20",
+        "SHELL_BIT_OFFSET=52",
+        "SHELL_BIT_LENGTH=6",
+        "CAMERA_BIT_OFFSET=58",
+        "CAMERA_BIT_LENGTH=6",
+        "SH_DEGREE=1",
+    ],
+    "[slang]": {
+        "editor.tabSize": 2,
+    },
+    "[cuda-cpp]": {
+        "editor.tabSize": 2,
+    },
+    "python.envFile": "${workspaceFolder}/.env",
+}
