@@ -1,4 +1,28 @@
-# Meshtryoshka
+<h1 align="center">Meshtryoshka: Differentiable Rendering of Real-World Scenes via Mesh Rasterization</h1>
+
+<p align="center">
+  <a href="https://davidcharatan.com/">David Charatan</a><sup>1</sup>,
+  <a href="https://danielxu9393.github.io/">Daniel Xu</a><sup>1</sup>,
+  <a href="https://szeliski.org/">Richard Szeliski</a><sup>3</sup>,
+  <a href="https://grgkopanas.github.io/">George Kopanas</a><sup>2</sup>,
+  <a href="https://www.vincentsitzmann.com/">Vincent Sitzmann</a><sup>1</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup>Massachusetts Institute of Technology&nbsp;&nbsp;
+  <sup>2</sup>Google DeepMind&nbsp;&nbsp;
+  <sup>3</sup>University of Washington
+</p>
+
+<h3 align="center">arXiv 2026</h3>
+<p align="center">(initial code release: August 2025)</p>
+
+<p align="center">
+  <a href="https://danielxu9393.github.io/meshtryoshka-website/">[Project Page]</a>
+  <a href="https://arxiv.org/abs/2606.28622">[Paper]</a>
+  <a href="https://www.youtube.com/watch?v=5alILkdTqh0">[Talk]</a>
+  <a href="https://github.com/dcharatan/meshtryoshka">[Code]</a>
+</p>
 
 This is the code for Meshtryoshka, a differentiable rendering framework that operates via mesh rendering.
 
